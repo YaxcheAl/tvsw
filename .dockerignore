@@ -1,0 +1,8 @@
+.git
+*.tar
+*.zip
+*.exe
+**/*.exe
+img/Docker Desktop Installer.exe
+docker-data
+documentacion/tmp

@@ -1,0 +1,37 @@
+1. Construir la imagen:
+
+docker build -t tvsw .
+
+2. Crear y arrancar el contenedor:
+
+docker run -d --name tvsw -p 8080:80 tvsw
+
+3. Abrir la pagina:
+
+http://localhost:8080
+
+4. Exportar la imagen:
+
+docker save -o tvsw.tar tvsw
+
+5. Importar la imagen en otro equipo:
+
+docker load -i tvsw.tar
+
+6. Arrancarla en otro equipo:
+
+docker run -d --name tvsw -p 8080:80 tvsw
+
+7. Ver contenedores arrancados:
+
+docker ps
+
+8. Parar el contenedor:
+
+docker stop tvsw
+
+9. Borrar el contenedor si quieres crearlo de nuevo desde cero:
+
+docker rm tvsw
+
+
