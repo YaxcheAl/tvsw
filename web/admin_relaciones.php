@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($id_serie > 0 && $id_genero > 0) {
             $sql = "INSERT IGNORE INTO serie_genero (id_serie, id_genero) VALUES ($id_serie, $id_genero)";
             $conexion->query($sql);
-            $mensaje = "Genero aÃ±adido a la serie.";
+            $mensaje = "Genero añadido a la serie.";
         }
     }
 
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     temporadas_aparece = $temporadas
             ";
             $conexion->query($sql);
-            $mensaje = "Personaje aÃ±adido a la serie.";
+            $mensaje = "Personaje añadido a la serie.";
         }
     }
 
@@ -150,7 +150,7 @@ $lista_actor_personaje = $conexion->query("
                         <?php } ?>
                     </select>
 
-                    <button type="submit">AÃ±adir genero</button>
+                    <button type="submit">Añadir genero</button>
                 </form>
             </article>
 
@@ -181,7 +181,7 @@ $lista_actor_personaje = $conexion->query("
                     <label>Temporadas aparece</label>
                     <input type="text" name="temporadas_aparece" placeholder="Ej: 1-3 o Varias">
 
-                    <button type="submit">AÃ±adir personaje</button>
+                    <button type="submit">Añadir personaje</button>
                 </form>
             </article>
 
@@ -226,7 +226,7 @@ $lista_actor_personaje = $conexion->query("
                         <td><?php echo limpiar($fila["titulo"]); ?></td>
                         <td><?php echo limpiar($fila["genero"]); ?></td>
                         <td class="acciones">
-                            <a href="admin_relaciones.php?borrar_serie_genero=<?php echo $fila["id_serie"] . "-" . $fila["id_genero"]; ?>" onclick="return confirm('Â¿Quitar este genero de la serie?')">Quitar</a>
+                            <a href="admin_relaciones.php?borrar_serie_genero=<?php echo $fila["id_serie"] . "-" . $fila["id_genero"]; ?>" onclick="return confirm('¿Quitar este genero de la serie?')">Quitar</a>
                         </td>
                     </tr>
                 <?php } ?>
@@ -250,7 +250,7 @@ $lista_actor_personaje = $conexion->query("
                         <td><?php echo limpiar($fila["rol"]); ?></td>
                         <td><?php echo limpiar($fila["temporadas_aparece"]); ?></td>
                         <td class="acciones">
-                            <a href="admin_relaciones.php?borrar_serie_personaje=<?php echo $fila["id_serie"] . "-" . $fila["id_personaje"]; ?>" onclick="return confirm('Â¿Quitar este personaje de la serie?')">Quitar</a>
+                            <a href="admin_relaciones.php?borrar_serie_personaje=<?php echo $fila["id_serie"] . "-" . $fila["id_personaje"]; ?>" onclick="return confirm('¿Quitar este personaje de la serie?')">Quitar</a>
                         </td>
                     </tr>
                 <?php } ?>
@@ -270,7 +270,7 @@ $lista_actor_personaje = $conexion->query("
                         <td><?php echo limpiar(nombre_completo($fila["nombre"], $fila["apellido1"], $fila["apellido2"])); ?></td>
                         <td><?php echo limpiar($fila["personaje"]); ?></td>
                         <td class="acciones">
-                            <a href="admin_relaciones.php?borrar_actor_personaje=<?php echo $fila["id_actor"] . "-" . $fila["id_personaje"]; ?>" onclick="return confirm('Â¿Quitar este actor del personaje?')">Quitar</a>
+                            <a href="admin_relaciones.php?borrar_actor_personaje=<?php echo $fila["id_actor"] . "-" . $fila["id_personaje"]; ?>" onclick="return confirm('¿Quitar este actor del personaje?')">Quitar</a>
                         </td>
                     </tr>
                 <?php } ?>

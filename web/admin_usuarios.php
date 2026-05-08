@@ -85,7 +85,7 @@ $resultado_usuarios = $conexion->query("SELECT id_usuario, nombre_usuario, email
                 <label>Email</label>
                 <input type="email" name="email" required>
 
-                <label>ContraseÃ±a</label>
+                <label>Contraseña</label>
                 <input type="password" name="password" required>
 
                 <label>Rol</label>
@@ -118,7 +118,7 @@ $resultado_usuarios = $conexion->query("SELECT id_usuario, nombre_usuario, email
                         <td><?php echo limpiar($usuario["rol"]); ?></td>
                         <td class="acciones">
                             <?php if ($usuario["id_usuario"] != $_SESSION["id_usuario"]) { ?>
-                                <a href="admin_usuarios.php?borrar=<?php echo $usuario["id_usuario"]; ?>" onclick="return confirm('Â¿Seguro que quieres borrar este usuario?')">Borrar</a>
+                                <a href="admin_usuarios.php?borrar=<?php echo $usuario["id_usuario"]; ?>" onclick="return confirm('¿Seguro que quieres borrar este usuario?')">Borrar</a>
                             <?php } else { ?>
                                 <span>Usuario actual</span>
                             <?php } ?>

@@ -90,7 +90,7 @@ $resultado_actores = $conexion->query("SELECT * FROM actor ORDER BY nombre, apel
         <?php } ?>
 
         <section class="formulario-admin">
-            <h2><?php echo $actor["id_actor"] != "" ? "Editar actor" : "AÃ±adir actor"; ?></h2>
+            <h2><?php echo $actor["id_actor"] != "" ? "Editar actor" : "Añadir actor"; ?></h2>
 
             <form method="POST" action="admin_actores.php">
                 <input type="hidden" name="id_actor" value="<?php echo limpiar($actor["id_actor"]); ?>">
@@ -137,7 +137,7 @@ $resultado_actores = $conexion->query("SELECT * FROM actor ORDER BY nombre, apel
                         <td><?php echo limpiar($fila["nacionalidad"]); ?></td>
                         <td class="acciones">
                             <a href="admin_actores.php?editar=<?php echo $fila["id_actor"]; ?>">Editar</a>
-                            <a href="admin_actores.php?borrar=<?php echo $fila["id_actor"]; ?>" onclick="return confirm('Â¿Seguro que quieres borrar este actor?')">Borrar</a>
+                            <a href="admin_actores.php?borrar=<?php echo $fila["id_actor"]; ?>" onclick="return confirm('¿Seguro que quieres borrar este actor?')">Borrar</a>
                         </td>
                     </tr>
                 <?php } ?>

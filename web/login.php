@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: index.php");
             exit;
         } else {
-            $mensaje = "La contraseÃ±a no es correcta.";
+            $mensaje = "La contraseña no es correcta.";
         }
     } else {
         $mensaje = "No existe ningun usuario con ese email.";
@@ -60,13 +60,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label>Email</label>
                 <input type="email" name="email" required>
 
-                <label>ContraseÃ±a</label>
+                <label>Contraseña</label>
                 <input type="password" name="password" required>
 
                 <button type="submit">Entrar</button>
             </form>
 
-            <p>Â¿No tienes cuenta? <a href="registro.php">Registrate aqui</a></p>
+            <p>¿No tienes cuenta? <a href="registro.php">Registrate aqui</a></p>
         </section>
     </main>
 </body>

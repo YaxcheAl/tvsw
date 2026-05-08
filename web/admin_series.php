@@ -102,7 +102,7 @@ $resultado_series = $conexion->query("SELECT * FROM serie ORDER BY titulo");
         <?php } ?>
 
         <section class="formulario-admin">
-            <h2><?php echo $serie["id_serie"] != "" ? "Editar serie" : "AÃ±adir serie"; ?></h2>
+            <h2><?php echo $serie["id_serie"] != "" ? "Editar serie" : "Añadir serie"; ?></h2>
 
             <form method="POST" action="admin_series.php">
                 <input type="hidden" name="id_serie" value="<?php echo limpiar($serie["id_serie"]); ?>">
@@ -163,7 +163,7 @@ $resultado_series = $conexion->query("SELECT * FROM serie ORDER BY titulo");
                         <td><?php echo limpiar($fila["temporadas"]); ?></td>
                         <td class="acciones">
                             <a href="admin_series.php?editar=<?php echo $fila["id_serie"]; ?>">Editar</a>
-                            <a href="admin_series.php?borrar=<?php echo $fila["id_serie"]; ?>" onclick="return confirm('Â¿Seguro que quieres borrar esta serie?')">Borrar</a>
+                            <a href="admin_series.php?borrar=<?php echo $fila["id_serie"]; ?>" onclick="return confirm('¿Seguro que quieres borrar esta serie?')">Borrar</a>
                         </td>
                     </tr>
                 <?php } ?>

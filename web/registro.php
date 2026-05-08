@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password2 = $_POST["password2"];
 
     if ($password != $password2) {
-        $mensaje = "Las contraseÃ±as no coinciden.";
+        $mensaje = "Las contraseñas no coinciden.";
     } else {
         $sql_email = "SELECT id_usuario FROM usuario WHERE email = '$email'";
         $resultado_email = $conexion->query($sql_email);
@@ -80,16 +80,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label>Email</label>
                 <input type="email" name="email" required>
 
-                <label>ContraseÃ±a</label>
+                <label>Contraseña</label>
                 <input type="password" name="password" required>
 
-                <label>Repetir contraseÃ±a</label>
+                <label>Repetir contraseña</label>
                 <input type="password" name="password2" required>
 
                 <button type="submit">Registrarme</button>
             </form>
 
-            <p>Â¿Ya tienes cuenta? <a href="login.php">Inicia sesion</a></p>
+            <p>¿Ya tienes cuenta? <a href="login.php">Inicia sesion</a></p>
         </section>
     </main>
 </body>

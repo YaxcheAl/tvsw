@@ -8,7 +8,8 @@ RUN apt-get update \
 COPY . /var/www/html/
 COPY docker/start.sh /usr/local/bin/start-tvsw.sh
 
-RUN chmod +x /usr/local/bin/start-tvsw.sh \
+RUN sed -i 's/\r$//' /usr/local/bin/start-tvsw.sh \
+    && chmod +x /usr/local/bin/start-tvsw.sh \
     && echo "ServerName localhost" >> /etc/apache2/apache2.conf \
     && chown -R www-data:www-data /var/www/html
 

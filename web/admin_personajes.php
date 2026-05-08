@@ -81,7 +81,7 @@ $resultado_personajes = $conexion->query("SELECT * FROM personaje ORDER BY nombr
         <?php } ?>
 
         <section class="formulario-admin">
-            <h2><?php echo $personaje["id_personaje"] != "" ? "Editar personaje" : "AÃ±adir personaje"; ?></h2>
+            <h2><?php echo $personaje["id_personaje"] != "" ? "Editar personaje" : "Añadir personaje"; ?></h2>
 
             <form method="POST" action="admin_personajes.php">
                 <input type="hidden" name="id_personaje" value="<?php echo limpiar($personaje["id_personaje"]); ?>">
@@ -119,7 +119,7 @@ $resultado_personajes = $conexion->query("SELECT * FROM personaje ORDER BY nombr
                         <td><?php echo limpiar($fila["tipo_personaje"]); ?></td>
                         <td class="acciones">
                             <a href="admin_personajes.php?editar=<?php echo $fila["id_personaje"]; ?>">Editar</a>
-                            <a href="admin_personajes.php?borrar=<?php echo $fila["id_personaje"]; ?>" onclick="return confirm('Â¿Seguro que quieres borrar este personaje?')">Borrar</a>
+                            <a href="admin_personajes.php?borrar=<?php echo $fila["id_personaje"]; ?>" onclick="return confirm('¿Seguro que quieres borrar este personaje?')">Borrar</a>
                         </td>
                     </tr>
                 <?php } ?>
